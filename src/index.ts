@@ -104,11 +104,13 @@ export async function activate(context: ExtensionContext): Promise<void> {
     clientOptions
   )
 
+  // TODO: add references
   client.onRequest('markdown/parse', async (e: {uri: string, text?: string}) => {
     const uri = Uri.parse(e.uri);
     if (typeof e.text === 'string') {
       return parser.tokenize(new InMemoryDocument(uri, e.text, -1));
     } else {
+      // TODO: make it more robust
       const text = await workspace.readFile(uri.toString());
       return parser.tokenize(new InMemoryDocument(uri, text, -1));
     }
