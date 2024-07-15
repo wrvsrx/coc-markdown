@@ -1,8 +1,8 @@
-# coc-zk
+# coc-markdown
 
 ## Install
 
-`:CocInstall coc-zk`
+`:CocInstall coc-markdown`
 
 ## Lists
 
