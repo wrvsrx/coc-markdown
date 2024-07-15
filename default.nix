@@ -1,6 +1,6 @@
 { mkYarnPackage }:
 mkYarnPackage {
-  name = "coc-zk";
+  name = "coc-markdown";
   src = ./.;
   buildPhase = "yarn --offline build";
   installPhase = ''
